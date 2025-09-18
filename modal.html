@@ -1,0 +1,157 @@
+<!-- Modal Windows -->
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaithConnect - Church & Spiritual Life Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="believer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        
+    </style>
+</head>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('login-modal')">&times;</span>
+            <h2>Sign In to Your Account</h2>
+            <form>
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" class="form-control" placeholder="Your email">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" class="form-control" placeholder="Your password">
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p style="margin-top: 1rem;">Don't have an account? <a href="#" onclick="closeModal('login-modal'); openModal('register-modal')" style="color: var(--secondary);">Register here</a></p>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('register-modal')">&times;</span>
+            <h2>Create an Account</h2>
+            <form>
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" class="form-control" placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email Address</label>
+                    <input type="email" id="register-email" class="form-control" placeholder="Your email">
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" class="form-control" placeholder="Create a password">
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm">Confirm Password</label>
+                    <input type="password" id="register-confirm" class="form-control" placeholder="Confirm your password">
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="prayer-request-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('prayer-request-modal')">&times;</span>
+            <h2>Submit Prayer Request</h2>
+            <form>
+                <div class="form-group">
+                    <label for="prayer-name">Your Name (optional)</label>
+                    <input type="text" id="prayer-name" class="form-control" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="prayer-request">Prayer Request</label>
+                    <textarea id="prayer-request" class="form-control" placeholder="Please share your prayer request"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox"> Share anonymously
+                    </label>
+                </div>
+                <button type="submit" class="btn">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="giving-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('giving-modal')">&times;</span>
+            <h2>Support Our Ministry</h2>
+            <form>
+                <div class="form-group">
+                    <label for="giving-amount">Amount ($)</label>
+                    <input type="number" id="giving-amount" class="form-control" placeholder="Enter amount">
+                </div>
+                <div class="form-group">
+                    <label for="giving-frequency">Frequency</label>
+                    <select id="giving-frequency" class="form-control">
+                        <option>One-time</option>
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="giving-fund">Fund</label>
+                    <select id="giving-fund" class="form-control">
+                        <option>General Fund</option>
+                        <option>Missions</option>
+                        <option>Building Fund</option>
+                        <option>Benevolence</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Continue to Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = 'none';
+                }
+            }
+        }
+        
+        // Tab functionality
+        function openTab(tabId) {
+            // For demonstration, we'll just show an alert
+            // In a real application, this would show the appropriate content
+            alert('Navigating to ' + tabId.replace(/-/g, ' ') + '. In a real application, this would show the appropriate content.');
+        }
+        
+        // Mobile menu functionality
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Mobile dropdown functionality
+        if (window.innerWidth <= 768) {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(function(dropdown) {
+                dropdown.querySelector('a').addEventListener('click', function(e) {
+                    if (e.target.nodeName !== 'A' || e.target.parentNode.nodeName !== 'A') {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+        }
+    </script>

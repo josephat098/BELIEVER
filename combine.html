@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaithConnect - Church & Spiritual Life Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="believer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-church"></i>
+                    <span>FaithConnect</span>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-video"></i> Sermons <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="openTab('live-sermons')">Live Services</a>
+                            <a href="#" onclick="openTab('sermon-archive')">Sermon Archive</a>
+                            <a href="https://www.lightsource.com/" target="_blank">External Sermon Resources</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-book-bible"></i> Bible Study <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="openTab('daily-devotional')">Daily Devotional</a>
+                            <a href="#" onclick="openTab('bible-reading-plans')">Reading Plans</a>
+                            <a href="https://www.biblegateway.com/" target="_blank">Bible Gateway</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-pray"></i> Prayer <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="openModal('prayer-request-modal')">Submit Prayer Request</a>
+                            <a href="#" onclick="openTab('prayer-wall')">Prayer Wall</a>
+                            <a href="https://www.pray.com/" target="_blank">Prayer Resources</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-users"></i> Community <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="openModal('small-groups-modal')">Small Groups</a>
+                            <a href="#" onclick="openModal('events-modal')">Events</a>
+                            <a href="#" onclick="openTab('testimonials')">Testimonials</a>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="openModal('giving-modal')"><i class="fas fa-hand-holding-heart"></i> Giving</a></li>
+                    <li><a href="#" onclick="openModal('login-modal')" class="btn">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Connect with God and Community</h1>
+                <p>FaithConnect brings together all aspects of church services and Christian life in one platform. Join us in worship, fellowship, and spiritual growth.</p>
+                <a href="#" onclick="openModal('register-modal')" class="btn">Join Our Community</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Features</h2>
+                <p>Everything you need for your spiritual journey in one place</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Live Streaming</h3>
+                    <p>Watch live sermons and services from anywhere in the world. Never miss a service again.</p>
+                    <a href="#" onclick="openTab('live-sermons')" class="btn">Watch Now</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-bible"></i>
+                    </div>
+                    <h3>Bible Study</h3>
+                    <p>Access comprehensive Bible study materials, commentaries, and reading plans.</p>
+                    <a href="#" onclick="openTab('bible-reading-plans')" class="btn">Explore</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <h3>Prayer Requests</h3>
+                    <p>Share prayer requests and pray for others in our supportive community.</p>
+                    <a href="#" onclick="openModal('prayer-request-modal')" class="btn">Request Prayer</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Tithing & Giving</h3>
+                    <p>Support the ministry through secure online tithing and donations.</p>
+                    <a href="#" onclick="openModal('giving-modal')" class="btn">Give Now</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Forums</h3>
+                    <p>Connect with other believers, share testimonies, and discuss faith topics.</p>
+                    <a href="#" onclick="openModal('small-groups-modal')" class="btn">Join Now</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Pastoral Counseling</h3>
+                    <p>Schedule one-on-one sessions with pastoral counselors for spiritual guidance.</p>
+                    <a href="#" onclick="openModal('counseling-modal')" class="btn">Schedule</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sermon Section -->
+    <section class="sermon">
+        <div class="container">
+            <div class="sermon-container">
+                <div class="sermon-content">
+                    <h2>Latest Sermon</h2>
+                    <h3>Trusting God in Difficult Times</h3>
+                    <p>In this message, Pastor John explores how we can maintain our faith and trust in God even when facing life's greatest challenges.</p>
+                    <p>Drawing from the story of Job and Paul's letters, we learn practical steps to strengthen our faith during trials.</p>
+                    <p><strong>Scripture Focus:</strong> Romans 8:28 - "And we know that in all things God works for the good of those who love him, who have been called according to his purpose."</p>
+                    <a href="#" onclick="openTab('sermon-archive')" class="btn">Watch All Sermons</a>
+                </div>
+                <div class="sermon-video">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/6dJ5-v7Vl_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimonials</h2>
+                <p>Hear what our community members are saying</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">FaithConnect has transformed my spiritual life. The daily devotionals and prayer community have kept me connected to God during a difficult season.</p>
+                    <p class="testimonial-author">- Sarah Johnson</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">As someone who travels frequently for work, I used to struggle with consistency in church attendance. Now I can join services from anywhere in the world.</p>
+                    <p class="testimonial-author">- Michael Rodriguez</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The Bible study resources have helped me understand Scripture like never before. My small group uses the platform for our weekly meetings.</p>
+                    <p class="testimonial-author">- James and Lisa Thompson</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Join Our Faith Community Today</h2>
+            <p>Become part of a growing network of believers supporting each other in spiritual growth and Kingdom work. Experience the convenience of having all your spiritual resources in one place.</p>
+            <a href="#" onclick="openModal('register-modal')" class="btn">Create Your Account</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FaithConnect</h3>
+                    <p>A complete platform for church services and Christian life, helping believers grow in faith and connect in community.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#" onclick="openModal('about-modal')">About Us</a></li>
+                        <li><a href="#" onclick="openTab('sermon-archive')">Sermons</a></li>
+                        <li><a href="#" onclick="openModal('events-modal')">Events</a></li>
+                        <li><a href="#" onclick="openModal('contact-modal')">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="openTab('bible-reading-plans')">Bible Study Tools</a></li>
+                        <li><a href="#" onclick="openTab('daily-devotional')">Daily Devotionals</a></li>
+                        <li><a href="#" onclick="openModal('prayer-request-modal')">Prayer Requests</a></li>
+                        <li><a href="#" onclick="openModal('giving-modal')">Online Giving</a></li>
+                        <li><a href="#" onclick="openModal('counseling-modal')">Counseling Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Church Street, City, State</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@faithconnect.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FaithConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Windows -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('login-modal')">&times;</span>
+            <h2>Sign In to Your Account</h2>
+            <form>
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" class="form-control" placeholder="Your email">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" class="form-control" placeholder="Your password">
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p style="margin-top: 1rem;">Don't have an account? <a href="#" onclick="closeModal('login-modal'); openModal('register-modal')" style="color: var(--secondary);">Register here</a></p>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('register-modal')">&times;</span>
+            <h2>Create an Account</h2>
+            <form>
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" class="form-control" placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email Address</label>
+                    <input type="email" id="register-email" class="form-control" placeholder="Your email">
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" class="form-control" placeholder="Create a password">
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm">Confirm Password</label>
+                    <input type="password" id="register-confirm" class="form-control" placeholder="Confirm your password">
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="prayer-request-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('prayer-request-modal')">&times;</span>
+            <h2>Submit Prayer Request</h2>
+            <form>
+                <div class="form-group">
+                    <label for="prayer-name">Your Name (optional)</label>
+                    <input type="text" id="prayer-name" class="form-control" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="prayer-request">Prayer Request</label>
+                    <textarea id="prayer-request" class="form-control" placeholder="Please share your prayer request"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox"> Share anonymously
+                    </label>
+                </div>
+                <button type="submit" class="btn">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="giving-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('giving-modal')">&times;</span>
+            <h2>Support Our Ministry</h2>
+            <form>
+                <div class="form-group">
+                    <label for="giving-amount">Amount ($)</label>
+                    <input type="number" id="giving-amount" class="form-control" placeholder="Enter amount">
+                </div>
+                <div class="form-group">
+                    <label for="giving-frequency">Frequency</label>
+                    <select id="giving-frequency" class="form-control">
+                        <option>One-time</option>
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="giving-fund">Fund</label>
+                    <select id="giving-fund" class="form-control">
+                        <option>General Fund</option>
+                        <option>Missions</option>
+                        <option>Building Fund</option>
+                        <option>Benevolence</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Continue to Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = 'none';
+                }
+            }
+        }
+        
+        // Tab functionality
+        function openTab(tabId) {
+            // For demonstration, we'll just show an alert
+            // In a real application, this would show the appropriate content
+            alert('Navigating to ' + tabId.replace(/-/g, ' ') + '. In a real application, this would show the appropriate content.');
+        }
+        
+        // Mobile menu functionality
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Mobile dropdown functionality
+        if (window.innerWidth <= 768) {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(function(dropdown) {
+                dropdown.querySelector('a').addEventListener('click', function(e) {
+                    if (e.target.nodeName !== 'A' || e.target.parentNode.nodeName !== 'A') {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

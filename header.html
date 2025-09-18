@@ -1,0 +1,62 @@
+<!-- Header section -->
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaithConnect - Church & Spiritual Life Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="believer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        
+    </style>
+</head>
+<header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-church"></i>
+                    <span>FaithConnect</span>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-video"></i> Sermons <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="openTab('live-sermons')">Live Services</a>
+                            <a href="#" onclick="openTab('sermon-archive')">Sermon Archive</a>
+                            <a href="https://www.lightsource.com/" target="_blank">External Sermon Resources</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-book-bible"></i> Bible Study <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="openTab('daily-devotional')">Daily Devotional</a>
+                            <a href="#" onclick="openTab('bible-reading-plans')">Reading Plans</a>
+                            <a href="https://www.biblegateway.com/" target="_blank">Bible Gateway</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-pray"></i> Prayer <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="openModal('prayer-request-modal')">Submit Prayer Request</a>
+                            <a href="#" onclick="openTab('prayer-wall')">Prayer Wall</a>
+                            <a href="https://www.pray.com/" target="_blank">Prayer Resources</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-users"></i> Community <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="openModal('small-groups-modal')">Small Groups</a>
+                            <a href="#" onclick="openModal('events-modal')">Events</a>
+                            <a href="#" onclick="openTab('testimonials')">Testimonials</a>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="openModal('giving-modal')"><i class="fas fa-hand-holding-heart"></i> Giving</a></li>
+                    <li><a href="#" onclick="openModal('login-modal')" class="btn">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
